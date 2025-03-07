@@ -1,5 +1,7 @@
 package tictactoe.model;
 
+import java.util.Scanner;
+
 public abstract class Player {
     private int id;
     private String name;
@@ -43,5 +45,14 @@ public abstract class Player {
 
     public void setPlayerType(PlayerType playerType) {
         this.playerType = playerType;
+    }
+
+    public Move makeMove(Board board) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a row number");
+        int row = scanner.nextInt();
+        System.out.println("Please enter a column number");
+        int column = scanner.nextInt();
+        return  new Move(this, new Cell(row, column));
     }
 }

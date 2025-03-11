@@ -28,4 +28,9 @@ public class BotPlayer extends Player{
     public void setBotLevelStrategy(BotPlayingStrategy botLevelStrategy) {
         this.botLevelStrategy = botLevelStrategy;
     }
+
+    @Override
+    public Move makeMove(Board board) {
+        return botLevelStrategy.makeMove( board);
+    }
 }

@@ -16,7 +16,7 @@ public class Client {
         int boardSize = 3;
 
         Player player = new HumanPlayer(1, "John", new Symbol('#'));
-        Player player2 = new HumanPlayer(2, "Steve", new Symbol('0'));
+        Player player2 = new BotPlayer(2, "Steve", new Symbol('0'),BotLevel.EASY);
         //Player player3 = new BotPlayer(3, "Bot James", new Symbol('^'), BotLevel.EASY);
         WinningStrategy winningStrategy1 = new RowWinningStrategy();
         WinningStrategy winningStrategy2 = new ColumnWinningStrategy();
